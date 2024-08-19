@@ -1,11 +1,11 @@
-// Verifica se o ambiente suporta 'fetch', disponível a partir do Node.js 18
+// Verifica se o ambiente suporta 'fetch'
 if (typeof fetch === 'undefined') {
-  global.fetch = require('node-fetch'); // Para versões mais antigas, use 'node-fetch'
+  global.fetch = require('node-fetch'); 
 }
 
 async function fetchUserData() {
   try {
-    // Fazendo a requisição GET para a API fictícia
+    // Fazendo a requisição GET para a API
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
     
     if (!response.ok) {
